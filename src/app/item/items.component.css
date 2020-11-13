@@ -1,0 +1,106 @@
+
+.ns-root{
+   --ale-number:rotate(1000deg);
+   --inicio-number:rotate(0deg);
+  }
+  
+
+.roda{
+    height: 250;
+    width: 250;
+}
+
+
+.item{
+width: 250px;
+height: 250px;
+clip-path: polygon(0 92%,100% 50%,0 8%);   
+background-color: yellow;
+top: 120px;
+left: 0;
+}
+
+
+.item2{
+    width: 250px;
+    height: 250px;
+    clip-path: polygon(100% 92%,0 50%,100% 8%);   
+    background-color: red;
+    left: 125;
+    top: 60;
+}
+
+.item3{
+    width: 250px;
+    height: 250px;
+    clip-path: polygon(50% 0%,8% 100%,92% 100%);   
+    background-color: blue;
+    margin-top: 250px;
+    left: 125px;
+}
+
+.item4{
+    width: 250px;
+    height: 250px;
+    clip-path: polygon(50% 100%,92% 0,8% 0%);   
+    background-color: orange;
+    margin-bottom: 250px;
+    left: 125px;
+}
+
+    
+.centro{
+    height: 100;
+    width: 100;
+    background-color: blue;
+    border-radius: 50%;
+    top:50;
+    left: 50;
+}
+
+.item5{
+    width: 255px;
+    height: 255px;
+    clip-path: polygon(100% 92%,0 50%,100% 8%);   
+    background-color: black;
+    transform: rotate(-45deg);
+    margin-left: 215px;
+    margin-top: 25px;
+}
+
+.item6{
+    width: 255px;
+    height: 255px;
+    clip-path: polygon(100% 92%,0 50%,100% 8%);   
+    background-color: green;
+    transform: rotate(135deg);
+    
+    margin-top: 210px;
+    margin-left: 35px;  
+    
+}
+
+.item7{
+    width: 255px;
+    height: 255px;
+    clip-path: polygon(100% 92%,0 50%,100% 8%);   
+    background-color: darkturquoise;
+    transform: rotate(45deg);
+    
+    margin-top: 210px;
+    margin-left: 210px;
+    
+    
+}
+
+.item8{
+    width: 250px;
+    height: 250px;
+    clip-path: polygon(0 92%,100% 50%,0 8%);   
+    background-color: purple;
+    transform: rotate(45deg);
+    margin-right: 50px;
+    margin-left: 35px;
+    margin-top: 28px;
+}
+
