@@ -49,24 +49,25 @@ export class ItemsComponent implements OnInit {
        const lbl = page.getViewById('estrutura') as View;
        
         
-       let ale =Math.floor(Math.random() * 8 + 1)
+       let ale = parseInt(this.sortear(1,8).join(','));
+
        let deg,cor;
        switch(ale){
            case 1:
                 deg=450;
-                cor="Amarelo"
+                cor="30% de desconto !"
                 break;
             case 2:
-                deg=270
-                cor="Vermelho"
+                deg=1350
+                cor="3 rodadas grátis"
                 break;
             case 3:
-                deg=180;
-                cor="Azul"
+                deg=1260;
+                cor="50% desconto"
                 break;
             case 4:
                 deg=360;
-                cor="Laranja"
+                cor="70% desconto"
                 break;
             case 5:
                 deg=675;
@@ -74,20 +75,46 @@ export class ItemsComponent implements OnInit {
                 break;
             case 6:
                 deg=855;
-                cor="Verde"
+                cor="Copo do evento"
                 break;
             case 7:
                 deg=585;
-                cor="Azul piscina"
+                cor="Pulseira VIP"
                 break;
             case 8:
                 deg=765;
-                cor="Roxo"
+                cor="Rélogio"
                 break;    
        }
+    
 
        lbl.animate({rotate : deg, duration: 3000 });
 
-       alert("Valor aleatorio gerado:"+ale+" que esta ligado a "+cor)
+       setTimeout(function(){
+        alert("Parabéns você ganhou "+cor)
+        lbl.animate({rotate : 0, duration: 3000 });
+
+       },4000)
+       
     }
+
+    sortear(quantidade, maximo) {
+        var numeros = [];
+      
+        console.time('Sorteando');
+      
+        // Preenche um array com os números de 1 ao maximo
+        for (var numero = 1; numero <= maximo;  numero++) {
+          numeros.push(numero);
+        }
+        
+        numeros.sort(function randomizar(a, b) {
+          return Math.random() * 2 - 1; // Ordena randomicamente
+        });
+      
+        console.timeEnd('Sorteando');
+        
+        return numeros.splice(0, quantidade);
+      }
+      
 }
