@@ -1,5 +1,5 @@
 
-<ActionBar title="Roleta da Sorte" class="action-bar">
+<ActionBar title="Roleta da Sort" class="action-bar">
 </ActionBar>
 
 
@@ -7,21 +7,70 @@
 
     <AbsoluteLayout class="roda">
         <AbsoluteLayout class="sa" id="estrutura" >
-            <label class="item"><span><strong>5</strong></span></label>
-            <label class="item2"></label>
-            <label class="item3"></label>
-            <label class="item4"></label>
-            <label class="item5"></label>
-            <label class="item6"></label>
-            <label class="item7"></label>
-            <label class="item8"></label>
+            <AbsoluteLayout class="item">
+                    <Image src="~/assets/images/beer-outline.png" loadMode="async" stretch="aspectFit" class="icon"></Image>    
+                    <label class="textoElemento" text="30% desconto"></label>
+
+            </AbsoluteLayout>
+
+            <AbsoluteLayout class="item2">
+                <Image src="~/assets/images/beer-outline.png" loadMode="async" stretch="aspectFit" class="icon2"></Image>
+
+                <label class="textoElemento2" text="3 rodadas gratis"></label>
+            
+            </AbsoluteLayout>
+
+            <AbsoluteLayout class="item3">
+                <Image src="~/assets/images/beer-outline.png" loadMode="async" stretch="aspectFit" class="icon3"></Image>
+                <label class="textoElemento3" text="50% desconto"></label>
+
+            </AbsoluteLayout>
+
+            <AbsoluteLayout class="item4">
+                <Image src="~/assets/images/beer-outline.png" loadMode="async" stretch="aspectFit" class="icon4"></Image>
+                <label class="textoElemento4" text="Cerveja Gratis"></label>
+                
+            </AbsoluteLayout>
+
+            <AbsoluteLayout class="item5">
+                <Image src="~/assets/images/beer-outline.png" loadMode="async" stretch="aspectFit" class="icon5"></Image>
+                <label class="textoElemento5" text="70% desconto"></label>
+
+            </AbsoluteLayout>
+
+            <AbsoluteLayout class="item6">
+                <Image src="~/assets/images/beer-outline.png" loadMode="async" stretch="aspectFit" class="icon6"></Image>
+                <label class="textoElemento6" text="Copo Evento"></label>
+
+            </AbsoluteLayout>
+
+            <AbsoluteLayout class="item7">
+                <Image src="~/assets/images/beer-outline.png" loadMode="async" stretch="aspectFit" class="icon7"></Image>
+                <label class="textoElemento7" text="Pulseira VIP"></label>
+            
+            </AbsoluteLayout>
+
+            <AbsoluteLayout class="item8">
+                <Image src="~/assets/images/beer-outline.png" loadMode="async" stretch="aspectFit" class="icon8"></Image>
+                <label class="textoElemento8" text="Relogio evento"></label>
+            
+            </AbsoluteLayout>
             
         </AbsoluteLayout>
-           
+
+
+        <AbsoluteLayout (tap)="girar($event)" class="botaoGiro"><label class="textoGiro" text="GIRAR"></label></AbsoluteLayout>
+
+        <AbsoluteLayout class="indicador"> 
+          
+        </AbsoluteLayout>
+        <AbsoluteLayout class="indicador-aux"></AbsoluteLayout>
         
+
+
         
     </AbsoluteLayout>
 
-        <Button text="giro" (tap)="girar($event)" class="btn btn-primary btn-active"></Button>
+        
         
     </StackLayout>
