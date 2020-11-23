@@ -6,8 +6,8 @@
 <StackLayout >
 
     <AbsoluteLayout class="roda">
-        <AbsoluteLayout class="sa" id="estrutura" >
-            <AbsoluteLayout class="item">
+        <AbsoluteLayout class="contorno"  id="estrutura" (loaded)="onLoaded($event)" >
+            <AbsoluteLayout class="item" >
                     <Image src="~/assets/images/desconto.png" loadMode="async" stretch="aspectFit" class="icon"></Image>    
                     <label class="textoElemento" text="30% desconto"></label>
 
@@ -21,20 +21,19 @@
             </AbsoluteLayout>
 
             <AbsoluteLayout class="item3">
-                <Image src="~/assets/images/desconto.png" loadMode="async" stretch="aspectFit" class="icon3"></Image>
-                <label class="textoElemento3" text="50% desconto"></label>
-
+                <Image src="~/assets/images/beer-outline.png" loadMode="async" stretch="aspectFit" class="icon3"></Image>
+                <label class="textoElemento3" text="Cerveja Gratis"></label>
             </AbsoluteLayout>
 
             <AbsoluteLayout class="item4">
-                <Image src="~/assets/images/beer-outline.png" loadMode="async" stretch="aspectFit" class="icon4"></Image>
-                <label class="textoElemento4" text="Cerveja Gratis"></label>
-                
+                <Image src="~/assets/images/clock.png" loadMode="async" stretch="aspectFit" class="icon4"></Image>
+                <label class="textoElemento4" text="Relogio evento"></label>
+            
             </AbsoluteLayout>
 
             <AbsoluteLayout class="item5">
-                <Image src="~/assets/images/desconto.png" loadMode="async" stretch="aspectFit" class="icon5"></Image>
-                <label class="textoElemento5" text="70% desconto"></label>
+                <Image src="~/assets/images/vip.png" loadMode="async" stretch="aspectFit" class="icon5"></Image>
+                <label class="textoElemento5" text="Pulseira VIP"></label> 
 
             </AbsoluteLayout>
 
@@ -44,17 +43,7 @@
 
             </AbsoluteLayout>
 
-            <AbsoluteLayout class="item7">
-                <Image src="~/assets/images/vip.png" loadMode="async" stretch="aspectFit" class="icon7"></Image>
-                <label class="textoElemento7" text="Pulseira VIP"></label>
             
-            </AbsoluteLayout>
-
-            <AbsoluteLayout class="item8">
-                <Image src="~/assets/images/clock.png" loadMode="async" stretch="aspectFit" class="icon8"></Image>
-                <label class="textoElemento8" text="Relogio evento"></label>
-            
-            </AbsoluteLayout>
             
         </AbsoluteLayout>
 
@@ -65,8 +54,8 @@
           
         </AbsoluteLayout>
         <AbsoluteLayout class="indicador-aux"></AbsoluteLayout>
-        
-
+    
+        <AbsoluteLayout class="contorno"></AbsoluteLayout>
 
         
     </AbsoluteLayout>

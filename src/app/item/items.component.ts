@@ -28,20 +28,27 @@ export class ItemsComponent implements OnInit {
     }
 
     ngOnInit(): void {
-       
         
     }
 
+    onLoaded(event) {
+        //Conserto Bug Indicador
+        const layout = event.object;
+        if (layout.android) {
+          layout.android.getParent().setClipChildren(false);
+        }
+      }
+
     girar(args:EventData){
         /*VALORES DOS ANGULOS
-       585 item 7 azul piscina
-       675 item 5 preto
-       765 item 8 roxo
-       855 item 6 verde
-       450 item 1 amarelo
-       360 item 4 laranja
-       270 item 2 vermelho
-       180 item 3 azul
+        PADRÃO = 70 raus
+        ITEM 1 = 790 graus
+        ITEM 2 = 1330 graus
+        ITEM 3 = 910 graus
+        ITEM 4 = 1090 graus
+        ITEM 5 = 670 graus
+        ITEM 6 = 850 graus
+
       */
        const view = args.object as View;
 
@@ -49,53 +56,44 @@ export class ItemsComponent implements OnInit {
        const lbl = page.getViewById('estrutura') as View;
        
         
-       let ale = parseInt(this.sortear(1,8).join(','));
+       let ale = parseInt(this.sortear(1,6).join(','));
 
-       let deg,cor;
+       let deg,premio;
        switch(ale){
            case 1:
-                deg=450;
-                cor="30% de desconto !"
+                deg=790;
+                premio="30% de desconto !"
                 break;
             case 2:
-                deg=1350
-                cor="3 rodadas grátis"
+                deg=1330
+                premio="3 rodadas grátis"
                 break;
             case 3:
-                deg=1260;
-                cor="50% desconto"
+                deg=910;
+                premio="Cerveja Grátis"
                 break;
             case 4:
-                deg=360;
-                cor="70% desconto"
+                deg=1090;
+                premio="Relógio Evento"
                 break;
             case 5:
-                deg=675;
-                cor="Preto"
+                deg=670;
+                premio="Pulseira VIP"
                 break;
             case 6:
-                deg=855;
-                cor="Copo do evento"
+                deg=850;
+                premio="Copo Evento"
                 break;
-            case 7:
-                deg=585;
-                cor="Pulseira VIP"
-                break;
-            case 8:
-                deg=765;
-                cor="Rélogio"
-                break;    
        }
     
-
+      //Duration como duração da animação em milisegundos
        lbl.animate({rotate : deg, duration: 3000 });
 
        setTimeout(function(){
-        alert("Parabéns você ganhou "+cor)
-        lbl.animate({rotate : 0, duration: 3000 });
+        alert("N:"+ale+" Parabéns você ganhou "+premio)
+        lbl.animate({rotate : 70, duration: 3000 });
 
-       },4000)
-       
+       },4000)       
     }
 
     sortear(quantidade, maximo) {
@@ -103,16 +101,15 @@ export class ItemsComponent implements OnInit {
       
         console.time('Sorteando');
       
-        // Preenche um array com os números de 1 ao maximo
         for (var numero = 1; numero <= maximo;  numero++) {
           numeros.push(numero);
         }
         
         numeros.sort(function randomizar(a, b) {
-          return Math.random() * 2 - 1; // Ordena randomicamente
+          return Math.random() * 2 - 1; 
         });
       
-        console.timeEnd('Sorteando');
+        
         
         return numeros.splice(0, quantidade);
       }
